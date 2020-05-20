@@ -1,0 +1,28 @@
+<mat-card *ngIf="apod">
+    <mat-card-header>
+            <mat-card-title>
+        <h1>
+          Astronomic picture of the day
+        </h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <p>
+          {{ apod.date }}
+        </p>
+      </mat-card-subtitle>
+    </mat-card-header>
+      <img mat-card-image [src]="apod.hdurl" />
+    <mat-card-content>
+      <h2>{{ apod.title }}</h2>
+      <p>
+        {{ apod.explanation }}
+      </p>
+      
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-raised-button href="whatsapp://send?text=Astronomy Picture of the day localhost:4200" data-text="Take a look at this awesome website:"><span class="material-icons">
+        share
+        </span>  Share</a>
+    </mat-card-actions>
+  </mat-card>
+  
